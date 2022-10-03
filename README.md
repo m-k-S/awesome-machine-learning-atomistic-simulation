@@ -1,10 +1,11 @@
-# Machine Learning for Materials Discovery
+# Deep Learning for Atomistic Simulation
 
-This repository aims to serve as a (hopefully) consistently updated list of literature that discusses the application of machine learning to the problem of materials discovery.
+This document aims to serve as a concise overview of literature that discusses the application of deep learning to the problem of atomistic simulation, an emerging field that is growing at a rapid pace:
 
-I've primarily created this as a way
+![Mentions of "neural network interatomic potential" by publication year, from Clairivate Web of Science (Oct 2022)](img/NNIPvsYear.png)
+![Mentions of "neural network force field" by publication year, from Clairivate Web of Science (Oct 2022)](img/NNFFvsYear.png)
 
-Although this repository is nominally focused on materials research, it includes many papers on molecule and drug research as many of the methods contain relevant ideas. However, some lines of literature, such as the usage of SMILES strings as input representations for deep learning models (as this applies only to molecules).
+This repository is a result of my personal attempt to parse existing literature and understand the different approaches from the various groups that are publishing in the field. It is intentionally *not* comprehensive; I have attempted to only select articles that characterize trends in the development of the field. Also, there are just too many papers, and it seems unproductive to spend more time searching for papers than reading them.
 
 Please feel free to open an issue or pull requests.
 
@@ -133,7 +134,7 @@ Please feel free to open an issue or pull requests.
 
 [Towards Universal Neural Network Potential for Material Discovery Applicable to Arbitrary Combination of 45 Elements](https://arxiv.org/pdf/2106.14583.pdf)
 
-
+[Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://openreview.net/pdf?id=_V-nKeWvs7p)
 
 [Geometric and Physical Quantities Improve E(3) Equivariant Message Passing](https://arxiv.org/abs/2110.02905)
 
@@ -196,179 +197,3 @@ Please feel free to open an issue or pull requests.
 [NNP/MM: Fast molecular dynamics simulations with machine learning potentials and molecular mechanics](https://arxiv.org/abs/2201.08110)
 
 [A fast neural network approach for direct covariant forces prediction in complex multi-element extended systems](https://www.nature.com/articles/s42256-019-0098-0)
-
-## Property Prediction
-
-[3D Infomax improves GNNs for Molecular Property Prediction](https://arxiv.org/abs/2110.04126)
-
-[Equivariant Graph Attention Networks for Molecular Property Prediction](https://arxiv.org/pdf/2202.09891.pdf)
-
-[Equivariant message passing for the prediction of tensorial properties and molecular spectra](https://arxiv.org/abs/2102.03150)
-
-[Protein Interface Prediction using Graph Convolutional Networks](https://proceedings.neurips.cc/paper/2017/file/f507783927f2ec2737ba40afbd17efb5-Paper.pdf)
-
-[MolNet: A Chemically Intuitive Graph Neural Network for Prediction of Molecular Properties](https://arxiv.org/abs/2203.09456)
-
-[Graph Networks as a Universal Machine Learning Framework for Molecules and Crystals](https://arxiv.org/abs/1812.05055)
-
-[Direct Prediction of Phonon Density of States With Euclidean Neural Networks](https://onlinelibrary.wiley.com/doi/10.1002/advs.202004214)
-
-[PhysNet: A Neural Network for Predicting Energies, Forces, Dipole Moments, and Partial Charges](https://pubs.acs.org/doi/10.1021/acs.jctc.9b00181)
-
-[Graph network based deep learning of bandgaps](https://aip.scitation.org/doi/abs/10.1063/5.0066009)
-
-[Graph representational learning for bandgap prediction in varied perovskite crystals](https://www.sciencedirect.com/science/article/abs/pii/S0927025621002573)
-
-[Predicting energy and stability of known and hypothetical crystals using graph neural network](https://www.sciencedirect.com/science/article/pii/S2666389921002233)
-
-[Materials property prediction using symmetry-labeled graphs as atomic position independent descriptors](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.104114)
-
-[Deep Learning of Activation Energies ](https://pubs.acs.org/doi/10.1021/acs.jpclett.0c00500)
-
-[BonDNet: a graph neural network for the prediction of bond dissociation energies for charged molecules](https://pubs.rsc.org/en/content/articlelanding/2021/sc/d0sc05251e)
-
-[A graph-convolutional neural network model for the prediction of chemical reactivity](https://pubs.rsc.org/en/content/articlelanding/2019/sc/c8sc04228d)
-
-[Graph neural networks for an accurate and interpretable prediction of the properties of polycrystalline materials](https://www.nature.com/articles/s41524-021-00574-w)
-
-[A self-attention based message passing neural network for predicting molecular lipophilicity and aqueous solubility](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-0414-z)
-
-[Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.145301)
-
-[Developing an improved Crystal Graph Convolutional Neural Network framework for accelerated materials discovery](https://arxiv.org/abs/1906.05267)
-
-[A geometric-information-enhanced crystal graph network for predicting properties of materials](https://www.nature.com/articles/s43246-021-00194-3)
-
-[Atomistic Line Graph Neural Network for improved materials property predictions](https://www.nature.com/articles/s41524-021-00650-1)
-
-[Molecule Property Prediction Based on Spatial Graph Embedding](https://pubs.acs.org/doi/10.1021/acs.jcim.9b00410)
-
-[Symmetry-Adapted Machine Learning for Tensorial Properties of Atomistic Systems](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.036002)
-
-[On-the-fly machine learning force field generation: Application to melting points](https://arxiv.org/abs/1904.12961)
-
-[Solid Harmonic Wavelet Scattering for Predictions of Molecule Properties](https://arxiv.org/abs/1805.00571)
-
-[Neural Message Passing with Edge Updates for Predicting Properties of Molecules and Materials](https://arxiv.org/abs/1806.03146)
-
-[Neural Message Passing for Quantum Chemistry](https://arxiv.org/abs/1704.01212)
-
-[Learning invariant representations of molecules for atomization energy prediction](https://dl.acm.org/doi/10.5555/2999134.2999184)
-
-## Materials and Molecules Generation / Design
-
-### Materials
-
-[Data-Driven Approach to Encoding and Decoding 3-D Crystal Structures](https://arxiv.org/abs/1909.00949)
-
-[Inverse design of nanoporous crystalline reticular materials with deep generative models](https://www.nature.com/articles/s42256-020-00271-1)
-
-[Constrained crystals deep convolutional generative adversarial network for the inverse design of crystal structures](https://www.nature.com/articles/s41524-021-00526-4)
-
-
-### Molecules
-
-[Efficient learning of non-autoregressive graph variational autoencoders for molecular graph generation](https://link.springer.com/article/10.1186/s13321-019-0396-x)
-
-[Symmetry-Aware Actor-Critic for 3D Molecular Design](https://arxiv.org/abs/2011.12747)
-
-[Equivariant neural networks for inverse problems](https://arxiv.org/abs/2102.11504)
-
-[GraphVAE: Towards Generation of Small Graphs Using Variational Autoencoders](https://arxiv.org/pdf/1802.03480.pdf)
-
-[Efficient Graph Generation with Graph Recurrent Attention Networks](https://arxiv.org/abs/1910.00760)
-
-[Efficient learning of non-autoregressive graph variational autoencoders for molecular graph generation](https://link.springer.com/article/10.1186/s13321-019-0396-x)
-
-[Multiresolution Equivariant Graph Variational Autoencoder](https://arxiv.org/pdf/2106.00967.pdf)
-
-[FastFlows: Flow-Based Models for Molecular Graph Generation](https://arxiv.org/abs/2201.12419)
-
-[Multi-objective de novo drug design with conditional graph generative model](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0287-6)
-
-[Graph networks for molecular design](https://iopscience.iop.org/article/10.1088/2632-2153/abcf91)
-
-[De novo drug design using reinforcement learning with graph-based deep generative models](https://chemrxiv.org/engage/chemrxiv/article-details/60fc07bd171fc7a0adb87039)
-
-[MoFlow: An Invertible Flow Model for Generating Molecular Graphs](https://arxiv.org/abs/2006.10137)
-
-[Inverse molecular design using machine learning: Generative models for matter engineering](https://www.science.org/doi/10.1126/science.aat2663)
-
-[Graph Convolutional Policy Network for Goal-Directed Molecular Graph Generation](https://arxiv.org/abs/1806.02473)
-
-[Constrained Graph Variational Autoencoders for Molecule Design](https://arxiv.org/abs/1805.09076)
-
-
-## Explainability
-
-[Using attribution to decode binding mechanism in neural network models for chemistry](https://www.pnas.org/doi/abs/10.1073/pnas.1820657116)
-
-[Interpretable Molecule Generation via Disentanglement Learning](https://dl.acm.org/doi/10.1145/3388440.3414709)
-
-# Applications
-
-## 2D Materials
-
-[Inverse design of two-dimensional materials with invertible neural networks](https://www.nature.com/articles/s41524-021-00670-x)
-
-[Coupling a Crystal Graph Multilayer Descriptor to Active Learning for Rapid Discovery of 2D Ferromagnetic Semiconductors/Half‐Metals/Metals](https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.202002658)
-
-## Photovoltaics
-
-[Accelerated Discovery of Efficient Solar Cell Materials Using Quantum and Machine-Learning Methods](https://pubs.acs.org/doi/10.1021/acs.chemmater.9b02166)
-
-## Batteries
-
-[Accelerated Atomistic Modeling of Solid-State Battery Materials With Machine Learning](https://www.frontiersin.org/articles/10.3389/fenrg.2021.695902/full)
-
-[Machine Learning-Aided Discovery of Superionic Solid-State Electrolyte for Li-Ion Batteries](https://arxiv.org/abs/2202.06763)
-
-[Towards predictive design of electrolyte solutions by accelerating ab initio simulation with neural networks](https://pubs.rsc.org/en/content/articlelanding/2022/ta/d2ta02610d/unauth)
-
-[Accurate Prediction of Voltage of Battery Electrode Materials Using Attention-Based Graph Neural Networks](https://pubs.acs.org/doi/10.1021/acsami.2c00029)
-
-[Hybrid physics-informed neural networks for lithium-ion battery modeling and prognosis](https://pml-ucf.github.io/files/journals/2021_POWER.pdf)
-
-[Automating Materials Exploration with a Semantic Knowledge Graph for Li‐Ion Battery Cathodes](https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202201437)
-
-[Applying transfer learning with convolutional neural networks to identify novel electrolytes for metal air batteries](https://www.sciencedirect.com/science/article/abs/pii/S2210271X21003017)
-
-[Machine Learning-Assisted Discovery of Solid Li-Ion Conducting Materials](https://pubs.acs.org/doi/10.1021/acs.chemmater.8b03272)
-
-## Thermoelectrics
-
-[Impressive Thermoelectric Figure of Merit in Two-Dimensional Tetragonal Pnictogens: a Combined First-Principles and Machine-Learning Approach](https://pubs.acs.org/doi/full/10.1021/acsami.1c18200)
-
-[Predicting thermoelectric properties from crystal graphs and material descriptors - first application for functional materials](https://arxiv.org/abs/1811.06219)
-
-[The thermoelectric performance of new structure SnSe studied by quotient graph and deep learning potential](https://www.sciencedirect.com/science/article/abs/pii/S2468606921000307)
-
-## Superconductors
-
-[Towards high-throughput superconductor discovery via machine learning](https://arxiv.org/ftp/arxiv/papers/2104/2104.11150.pdf)
-
-[Deep learning model for finding new superconductors](https://journals.aps.org/prb/pdf/10.1103/PhysRevB.103.014509)
-
-[Machine learning of superconducting critical temperature from Eliashberg theory](https://www.nature.com/articles/s41524-021-00666-7.pdf)
-
-## Glass
-
-[Unveiling the predictive power of static structure in glassy systems](https://www.nature.com/articles/s41567-020-0842-8)
-
-## Metals
-
-[Atomistic Graph Neural Networks for metals: Application to bcc iron](https://arxiv.org/abs/2109.14012)
-
-[DeepTMC: A deep learning platform to targeted design doped transition metal compounds](https://www.sciencedirect.com/science/article/abs/pii/S2405829721005377)
-
-## Metal-Organic Frameworks
-
-[Accelerating Discovery of Metal–Organic Frameworks for Methane Adsorption with Hierarchical Screening and Deep Learning](https://pubs.acs.org/doi/abs/10.1021/acsami.0c16516)
-
-[Combining crystal graphs and domain knowledge in machine learning to predict metal-organic frameworks performance in methane adsorption](https://www.sciencedirect.com/science/article/abs/pii/S1387181121007915)
-
-# Datasets
-
-[The Materials Project](https://ceder.berkeley.edu/publications/2013_Jain_Materials_Project.pdf)
-
-[The Open Quantum Materials Database (OQMD)](https://www.nature.com/articles/npjcompumats201510)
