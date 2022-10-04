@@ -1,14 +1,32 @@
 # Machine Learning for Atomistic Simulation
 
-This document aims to serve as a concise overview of literature that discusses the application of machine learning to the problem of atomistic simulation, an emerging field that is growing at a rapid pace:
-
-![Mentions of "neural network force field" by publication year, from Clairivate Web of Science (Oct 2022)](img/NNFFvsYear.png)
-
-This repository is a result of my personal attempt to parse existing literature and understand the different approaches from the various groups that are publishing in the field. I have attempted to select articles in a manner that provides some sense of the development of the field over time, as well as to characterize trends in this development. This is not intended as a comprehensive list, as there are just too many papers, and it seems unproductive to spend more time searching for papers than reading them.
-
-I've also separated the literature based on whether the work focuses on a particular method of representing materials or molecular data, or if it focuses on specific novel architectural developments for more effective processing of such data.
+This document aims to serve as a concise overview of literature that discusses the application of machine learning to the problem of atomistic simulation. It is *not* a comprehensive index but rather aims to provide a sense of the development of the field and highlight key papers.
 
 Please feel free to open an issue or pull requests.
+
+## Table of Contents
+
+  - [Embeddings and Representations](#embeddings-and-representations)
+    - [Atomic Cluster Expansion (ACE)](#atomic-cluster-expansion-ace)
+    - [Smooth Overlap of Atomic Position (SOAP)](#smooth-overlap-of-atomic-position-soap)
+    - [Gaussian Approximation Potentials (GAP)](#gaussian-approximation-potentials-gap)
+    - [Moment Tensor Potentials (MTP)](#moment-tensor-potentials-mtp)
+    - [Atom-Centered Symmetry Functions (ACSF)](#atom-centered-symmetry-functions-acsf)
+    - [FCHL](#fchl)
+    - [Wavelet Scattering](#wavelet-scattering)
+    - [Miscellaneous](#miscellaneous)
+    - [Meta-literature](#meta-literature)
+  - [Tools and Architectures](#tools-and-architectures)
+    - [e3nn Precursor](#e3nn-precursor)
+    - [e3nn](#e3nn)
+    - [Equivariant Graph Neural Networks (EGNN)](#equivariant-graph-neural-networks-egnn)
+    - [SchNet](#schnet)
+    - [Preferred Networks](#preferred-networks)
+    - [Symmetric Gradient Domain Machine Learning (sGDML)](#symmetric-gradient-domain-machine-learning-sgdml)
+    - [DeepPot](#deeppot)
+    - [DimeNet](#dimenet)
+    - [Miscellaneous](#miscellaneous)
+    - [Meta-literature](#meta-literature)
 
 ## Embeddings and Representations
 
