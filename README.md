@@ -14,13 +14,13 @@ Please feel free to open an issue or pull requests.
 
 Below are various techniques for representing atomic systems and materials in a manner that is intended for usage with machine learning systems.
 
-### Atomic Cluster Expansion
+### Atomic Cluster Expansion (ACE)
 
-[Atomic cluster expansion for accurate and transferable interatomic potentials](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.014104) [Jan 2019]
+[Atomic cluster expansion for accurate and transferable interatomic potentials](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.014104) (Drautz) [Jan 2019]
 
-[Atomic cluster expansion of scalar, vectorial and tensorial properties and including magnetism and charge transfer](https://arxiv.org/abs/2003.00221) [Feb 2020]
+[Atomic cluster expansion of scalar, vectorial and tensorial properties and including magnetism and charge transfer](https://arxiv.org/abs/2003.00221) (Drautz) [Feb 2020]
 
-[[2103.00814] Performant implementation of the atomic cluster expansion (PACE): Application to copper and silicon](https://arxiv.org/abs/2103.00814) (Lysogorskiy, van der Oord, Bochkarev, Menon, Rinaldi, Hammerschmidt, Mrovec, Thompson, Csányi, Ortner, Drautz)[Mar 2021]
+[[2103.00814] Performant implementation of the atomic cluster expansion (PACE): Application to copper and silicon](https://arxiv.org/abs/2103.00814) (Lysogorskiy, van der Oord, Bochkarev, Menon, Rinaldi, Hammerschmidt, Mrovec, Thompson, Csányi, Ortner, Drautz) [Mar 2021]
 
 [Atomic cluster expansion: Completeness, efficiency and stability](https://www.sciencedirect.com/science/article/pii/S0021999122000080?via%3Dihub) (Dusson, Bachmayr, Csanyi, Drautz, Etter, van der Oord, Ortner) [Apr 2022]
 
@@ -72,7 +72,7 @@ Below are various techniques for representing atomic systems and materials in a 
 
 [Atomistic structure search using local surrogate mode](https://arxiv.org/abs/2208.09273) (Rønne, Christiansen, Slavensky, Tang, Brix, Pedersen, Bisbo, Hammer) [Aug 2022]
 
-### Moment Tensor Potentials
+### Moment Tensor Potentials (MTP)
 
 [Moment Tensor Potentials: a class of systematically improvable interatomic potentials](https://arxiv.org/abs/1512.06054) (Shapeev) [Dec 2015]
 
@@ -80,7 +80,7 @@ Below are various techniques for representing atomic systems and materials in a 
 
 [Machine-learning potentials enable predictive $\textit{and}$ tractable high-throughput screening of random alloys](https://arxiv.org/abs/2107.05620) (Hodapp, Shapeev) [Jul 2021]
 
-### Atom-Centered Symmetry Functions
+### Atom-Centered Symmetry Functions (ACSF)
 
 [Generalized Neural-Network Representation of High-Dimensional Potential-Energy Surfaces](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401) (Behler, Parrinello) [Apr 2007]
   - One of the first works to introduce neural network interatomic potentials
@@ -111,6 +111,7 @@ Below are various techniques for representing atomic systems and materials in a 
 [Wavelet Scattering Networks for Atomistic Systems with Extrapolation of Material Properties](https://arxiv.org/abs/2006.01247) (Sinz, Swift, Brumwell, Liu, Jin Kim, Qi, Hirn) [Jun 2020]
 
 ### Miscellaneous
+One-off representation methods that were not significantly and explicitly developed upon further.
 
 [Fourier series of atomic radial distribution functions: A molecular fingerprint for machine learning models of quantum chemical properties](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.24912) (von Lilienfeld, Ramakrishnan, Rupp, Knoll) [Jul 2013]
 
@@ -143,7 +144,7 @@ Below are various techniques for representing atomic systems and materials in a 
 
 [DScribe: Library of descriptors for machine learning in materials science](https://www.sciencedirect.com/science/article/pii/S0010465519303042) (Himanen, Jäger, Morooka, Canova, Ranawat, Gao, Rinke, Foster) [Nov 2019]
 
-[Descriptors representing two- and three-body atomic distributions and their effects on the accuracy of machine-learned inter-atomic potentials](https://aip.scitation.org/doi/10.1063/5.0009491) (Jinnouchi, Karsai, Verdi, Asahi, Kresse) [Apr 2020]
+[Descriptors representing two- and three-body atomic distributions and their effects on the accuracy of machine-learned interatomic potentials](https://aip.scitation.org/doi/10.1063/5.0009491) (Jinnouchi, Karsai, Verdi, Asahi, Kresse) [Apr 2020]
 
 [Sensitivity and Dimensionality of Atomic Environment Representations used for Machine Learning Interatomic Potentials](https://arxiv.org/abs/2006.01915) (Onat, Ortner, Kermode) [Jun 2020]
 
@@ -157,15 +158,47 @@ Below are various techniques for representing atomic systems and materials in a 
 
 [The role of feature space in atomistic learning](https://iopscience.iop.org/article/10.1088/2632-2153/abdaf7) (Goscinski, Fraux, Imbalzano, Ceriotti) [Apr 2021]
 
-## Atomistic Simulation
+## Deep Learning Architectures
+These are networks that are intended to process materials (or molecular) data for the purposes of atomistic simulation (or property prediction)
 
-[Informing Geometric Deep Learning with Electronic Interactions to Accelerate Quantum Chemistry](https://arxiv.org/pdf/2105.14655.pdf)
+### e3nn Precursor
+[These works were developed independently of each other but propose very similar ideas which were mostly consolidated](https://www.youtube.com/watch?v=8CF8Grb_brE&t=1224s) into the [e3nn](https://e3nn.org/) framework.
 
-[SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks](https://arxiv.org/abs/2006.10503)
+[Tensor field networks: Rotation- and translation-equivariant neural networks for 3D point clouds](https://arxiv.org/abs/1802.08219) (Smidt, Thomas, Kearnes, Yang, Li, Kohlhoff, Riley) [Feb 2018]
 
-[N-body Networks: a Covariant Hierarchical Neural Network Architecture for Learning Atomic Potentials](https://arxiv.org/abs/1803.01588)
+[N-body Networks: a Covariant Hierarchical Neural Network Architecture for Learning Atomic Potentials](https://arxiv.org/abs/1803.01588) (Kondor) [Mar 2018]
 
-[3D Steerable CNNs: Learning Rotationally Equivariant Features in Volumetric Data](https://arxiv.org/abs/1807.02547)
+[Clebsch-Gordan Nets: a Fully Fourier Space Spherical Convolutional Neural Network](https://arxiv.org/abs/1806.09231)(Kondor, Lin, Trivedi) [Jun 2018]
+
+[3D Steerable CNNs: Learning Rotationally Equivariant Features in Volumetric Data](https://arxiv.org/abs/1807.02547) (Weiler, Geiger, Welling, Boomsma, Cohen) [Jul 2018]
+
+[SE(3)-equivariant prediction of molecular wavefunctions and electronic densities](https://arxiv.org/abs/2106.02347) (Unke, Bogojeski, Gastegger, Geiger, Smidt, Müller) [Jun 2021]
+
+### e3nn
+
+[E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials](https://arxiv.org/abs/2101.03164) (Batzner, Musaelian, Sun, Geiger, Mailoa, Kornbluth, Molinari, Smidt, Kozinsky) [Jan 2021]
+- Network is called 'NequIP'
+
+[Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics](https://arxiv.org/pdf/2204.05249.pdf) (Musaelian, Batzner, Johansson, Sun, Owen, Kornbluth, Kozinsky) [Apr 2022]
+- Network is called 'Allegro'
+
+[The Design Space of E(3)-Equivariant Atom-Centered Interatomic Potentials](https://arxiv.org/abs/2205.06643) (Batatia, Batzner, Kovács, Musaelian, Simm, Drautz, Ortner, Kozinsky, Csányi) [May 2022]
+- Discusses relationship between prior work in atomic representation methods (see above) and E(3)-equivariant neural networks; proposes a network called BOTNet
+
+[MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields](https://arxiv.org/abs/2206.07697) (Batatia, Kovács, Simm, Ortner, Csányi) [Jun 2022]
+
+[e3nn: Euclidean Neural Networks](https://arxiv.org/abs/2207.09453) (Geiger, Smidt) [Jul 2022]
+
+### SE(3)-CNN
+
+[SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks](https://arxiv.org/abs/2006.10503) (Fuchs, Worrall, Fischer, Welling) [Jun 2020]
+
+### EGNN
+
+[Geometric and Physical Quantities Improve E(3) Equivariant Message Passing](https://arxiv.org/abs/2110.02905) (Brandstetter, Hesselink, Pol, Bekkers, Welling) [Oct 2021]
+- Network is called 'Steerable E(3) Equivariant Graph Neural Network', or 'SEGNN'
+
+### SchNet
 
 [SchNet – a deep learning architecture for molecules and materials](https://arxiv.org/pdf/1712.06113.pdf)
 
@@ -173,35 +206,33 @@ Below are various techniques for representing atomic systems and materials in a 
 
 [Combining SchNet and SHARC: The SchNarc Machine Learning Approach for Excited-State Dynamics](https://pubs.acs.org/doi/full/10.1021/acs.jpclett.0c00527)
 
-[Clebsch-Gordan Nets: a Fully Fourier Space Spherical Convolutional Neural Network](https://arxiv.org/abs/1806.09231)
 
-[SE(3)-equivariant prediction of molecular wavefunctions and electronic densities](https://openreview.net/pdf?id=auGY2UQfhSu)
+### Preferred Networks
 
-[E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials](https://arxiv.org/abs/2101.03164)
+[TeaNet: universal neural network interatomic potential inspired by iterative electronic relaxations](https://arxiv.org/abs/1912.01398) (Takamoto, Izumi, Li) [Dec 2019]
 
-[Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics](https://arxiv.org/pdf/2204.05249.pdf)
+[Towards Universal Neural Network Potential for Material Discovery Applicable to Arbitrary Combination of 45 Elements](https://arxiv.org/pdf/2106.14583.pdf) (Takamoto, Shinagawa, Motoki, Nakago, Li, Kurata, Watanabe, Yayama, Iriguchi, Asano, Onodera, Ishii, Kudo, Ono, Sawada, Ishitani, Ong, Yamaguchi, Kataoka, Hayashi, Charoenphakdee, Ibuka) [Jun 2021]
 
-[MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields](https://arxiv.org/abs/2206.07697)
+### Miscellaneous
 
-[The Design Space of E(3)-Equivariant Atom-Centered Interatomic Potentials](https://arxiv.org/abs/2205.06643)
+[Informing Geometric Deep Learning with Electronic Interactions to Accelerate Quantum Chemistry](https://arxiv.org/pdf/2105.14655.pdf) (Qiao, Christensen, Welborn, Manby, Anandkumar, Miller III) [May 2021]
+- Network is called 'OrbNet-Equi'
 
-[e3nn: Euclidean Neural Networks](https://arxiv.org/abs/2207.09453)
 
-[TeaNet: universal neural network interatomic potential inspired by iterative electronic relaxations](https://arxiv.org/abs/1912.01398)
 
-[Towards Universal Neural Network Potential for Material Discovery Applicable to Arbitrary Combination of 45 Elements](https://arxiv.org/pdf/2106.14583.pdf)
+[Equivariant graph neural networks for fast electron density estimation of molecules, liquids, and solids](https://www.nature.com/articles/s41524-022-00863-y) (Jørgensen, Bhowmik) [Aug 2022]
+
+### Meta-literature
 
 [Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://openreview.net/pdf?id=_V-nKeWvs7p)
 
-[Geometric and Physical Quantities Improve E(3) Equivariant Message Passing](https://arxiv.org/abs/2110.02905)
 
-[Equivariant graph neural networks for fast electron density estimation of molecules, liquids, and solids](https://www.nature.com/articles/s41524-022-00863-y)
 
 [Learning Atomic Multipoles: Prediction of the Electrostatic Potential with Equivariant Graph Neural Networks](https://pubs.acs.org/doi/10.1021/acs.jctc.1c01021)
 
 [SpookyNet: Learning force fields with electronic degrees of freedom and nonlocal effects](https://www.nature.com/articles/s41467-021-27504-0#Abs1)
 
-[Tensor field networks: Rotation- and translation-equivariant neural networks for 3D point clouds](https://arxiv.org/abs/1802.08219)
+
 
 [Cormorant: Covariant Molecular Neural Networks](https://arxiv.org/abs/1906.04015)
 
