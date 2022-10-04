@@ -87,6 +87,9 @@ Below are various techniques for representing atomic systems and materials in a 
 | ------------ | --------- | --------- |
 | [Generalized Neural-Network Representation of High-Dimensional Potential-Energy Surfaces](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401) | Behler, Parrinello | Apr 2007 |
 | [Atom-centered symmetry functions for constructing high-dimensional neural network potentials](https://aip.scitation.org/doi/abs/10.1063/1.3553717) | Behler | Feb 2011 |
+| [An implementation of artificial neural-network potentials for atomistic materials simulations: Performance for TiO2](https://www.sciencedirect.com/science/article/abs/pii/S0927025615007806?via%3Dihub)  (aenet) | Artrith, Urban | Mar 2016 |
+| [Amp: A modular approach to machine learning in atomistic simulations](https://www.sciencedirect.com/science/article/abs/pii/S0010465516301266?via%3Dihub) | Khorshidi, Peterson | Oct 2016 |
+| [Efficient and accurate machine-learning interpolation of atomic energies in compositions with many species](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014112) | Artrith, Urban, Ceder | Jul 2017 |
 | [wACSF—Weighted atom-centered symmetry functions as descriptors in machine learning potentials](https://aip.scitation.org/doi/10.1063/1.5019667) | Gastegger, Schwiedrzik, Bittermann, Berzsenyi, Marquetand | Mar 2018 |
 | [Optimized symmetry functions for machine-learning interatomic potentials of multicomponent systems](https://aip.scitation.org/doi/10.1063/1.5040005) | Rostami, Amsler, Ghasemi | Sep 2018 |
 | [Augmenting machine learning of energy landscapes with local structural information](https://aip.scitation.org/doi/10.1063/5.0012407) | Honrao, Xie, Hennig | Aug 2020 |
