@@ -1,104 +1,161 @@
-# Deep Learning for Atomistic Simulation
+# Machine Learning for Atomistic Simulation
 
-This document aims to serve as a concise overview of literature that discusses the application of deep learning to the problem of atomistic simulation, an emerging field that is growing at a rapid pace:
+This document aims to serve as a concise overview of literature that discusses the application of machine learning to the problem of atomistic simulation, an emerging field that is growing at a rapid pace:
 
-![Mentions of "neural network interatomic potential" by publication year, from Clairivate Web of Science (Oct 2022)](img/NNIPvsYear.png)
 ![Mentions of "neural network force field" by publication year, from Clairivate Web of Science (Oct 2022)](img/NNFFvsYear.png)
 
-This repository is a result of my personal attempt to parse existing literature and understand the different approaches from the various groups that are publishing in the field. It is intentionally *not* comprehensive; I have attempted to only select articles that characterize trends in the development of the field. Also, there are just too many papers, and it seems unproductive to spend more time searching for papers than reading them.
+This repository is a result of my personal attempt to parse existing literature and understand the different approaches from the various groups that are publishing in the field. I have attempted to select articles in a manner that provides some sense of the development of the field over time, as well as to characterize trends in this development. This is not intended as a comprehensive list, as there are just too many papers, and it seems unproductive to spend more time searching for papers than reading them.
+
+I've also separated the literature based on whether the work focuses on a particular method of representing materials or molecular data, or if it focuses on specific novel architectural developments for more effective processing of such data.
 
 Please feel free to open an issue or pull requests.
 
-# Methods
-
 ## Embeddings and Representations
 
-### Atomic Representations
+Below are various techniques for representing atomic systems and materials in a manner that is intended for usage with machine learning systems.
 
-[SISSO: A compressed-sensing method for identifying the best low-dimensional descriptor in an immensity of offered candidates](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.2.083802)
+### Atomic Cluster Expansion
 
-[Unified theory of atom-centered representations and message-passing machine-learning schemes](https://aip.scitation.org/doi/pdf/10.1063/5.0087042)
+[Atomic cluster expansion for accurate and transferable interatomic potentials](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.014104) [Jan 2019]
 
-[Physics-Inspired Structural Representations for Molecules and Materials](https://pubs.acs.org/doi/10.1021/acs.chemrev.1c00021)
+[Atomic cluster expansion of scalar, vectorial and tensorial properties and including magnetism and charge transfer](https://arxiv.org/abs/2003.00221) [Feb 2020]
 
-[Atomic cluster expansion for accurate and transferable interatomic potentials](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.014104)
+[[2103.00814] Performant implementation of the atomic cluster expansion (PACE): Application to copper and silicon](https://arxiv.org/abs/2103.00814) (Lysogorskiy, van der Oord, Bochkarev, Menon, Rinaldi, Hammerschmidt, Mrovec, Thompson, Csányi, Ortner, Drautz)[Mar 2021]
 
-[Atomic cluster expansion: Completeness, efficiency and stability](https://www.sciencedirect.com/science/article/pii/S0021999122000080?via%3Dihub)
+[Atomic cluster expansion: Completeness, efficiency and stability](https://www.sciencedirect.com/science/article/pii/S0021999122000080?via%3Dihub) (Dusson, Bachmayr, Csanyi, Drautz, Etter, van der Oord, Ortner) [Apr 2022]
 
-[Multilayer atomic cluster expansion for semi-local interactions](https://arxiv.org/pdf/2205.08177.pdf)
+[Multilayer atomic cluster expansion for semi-local interactions](https://arxiv.org/pdf/2205.08177.pdf) (Bochkarev, Lysogorskiy, Ortner, Csanyi, Drautz) [May 2022]
 
-[Atomic cluster expansion of scalar, vectorial and tensorial properties and including magnetism and charge transfer](https://arxiv.org/abs/2003.00221)
+[Atomic cluster expansion and wave function representations](https://arxiv.org/abs/2206.11375) (Drautz, Ortner) [2022]
 
-[Fourier series of atomic radial distribution functions: A molecular fingerprint for machine learning models of quantum chemical properties](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.24912)
+[Permutation-adapted complete and independent basis for atomic cluster expansion descriptors](https://arxiv.org/abs/2208.01756) (Goff, Sievers, Wood, Thompson) [Aug 2022]
 
-[Continuous and optimally complete description of chemical environments using Spherical Bessel descriptors](https://aip.scitation.org/doi/10.1063/1.5111045)
+### Smooth Overlap of Atomic Position (SOAP)
 
-[Optimized symmetry functions for machine-learning interatomic potentials of multicomponent systems](https://aip.scitation.org/doi/10.1063/1.5040005)
+[On representing chemical environments](https://arxiv.org/abs/1209.3140) (Bartok, Kondor, Csanyi) [Mar 2013]
 
-[Atom-centered symmetry functions for constructing high-dimensional neural network potentials](https://aip.scitation.org/doi/abs/10.1063/1.3553717)
+[Comparing molecules and solids across structural and alchemical space](https://pubs.rsc.org/en/content/articlelanding/2016/cp/c6cp00415f) (De, Bartok, Csanyi, Ceriotti) [Apr 2016]
 
-[Atom-density representations for machine learning](https://aip.scitation.org/doi/10.1063/1.5090481)
+[Automatic Selection of Atomic Fingerprints and Reference Configurations for Machine-Learning Potentials](https://arxiv.org/abs/1804.02150) (Imbalzano, Anelli, Giofré, Klees, Behler, Ceriotti) [Apr 2018]
 
-[Efficient implementation of atom-density representations](https://arxiv.org/abs/2101.08814)
+[Machine-learning of atomic-scale properties based on physical principles](https://arxiv.org/abs/1901.10971) (Ceriotti, Willatt, Csányi) [Jan 2019]
 
-[Constant size descriptors for accurate machine learning models of molecular properties](https://aip.scitation.org/doi/10.1063/1.5020441)
+[Atom-density representations for machine learning](https://aip.scitation.org/doi/10.1063/1.5090481) (Willatt, Musil, Ceriotti) [Apr 2019]
 
-[Descriptors representing two- and three-body atomic distributions and their effects on the accuracy of machine-learned inter-atomic potentials](https://aip.scitation.org/doi/10.1063/5.0009491)
+[Atomic-scale representation and statistical learning of tensorial properties](https://arxiv.org/abs/1904.01623) (Grisafi, Wilkins, Willatt, Ceriotti) [Apr 2019]
 
-[The role of feature space in atomistic learning](https://iopscience.iop.org/article/10.1088/2632-2153/abdaf7)
+[Optimizing many-body atomic descriptors for enhanced computational performance of machine learning based interatomic potentials](https://arxiv.org/abs/1905.02142) (Caro) [May 2019]
 
-[Incompleteness of Atomic Structure Representations](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.166001)
+[Efficient implementation of atom-density representations](https://arxiv.org/abs/2101.08814) (Musil, Veit, Goscinski, Fraux, Willatt, Stricker, Junge, Ceriotti) [Jan 2021]
 
-[Geometric deep learning on molecular representations](https://www.nature.com/articles/s42256-021-00418-8)
+### Gaussian Approximation Potentials (GAP)
+(Many applications paper omitted; please [see here](https://arxiv.org/search/?query=%22Gaussian+Approximation+Potential%22&searchtype=all&source=header) for a more comprehensive list)
 
-[TUCAN: A molecular identifier and descriptor applicable to the whole periodic table from hydrogen to oganesson](https://europepmc.org/article/ppr/ppr479842)
+[Gaussian Approximation Potentials: the accuracy of quantum mechanics, without the electrons](https://arxiv.org/abs/0910.1019) (Bartok, Payne, Kondor, Csanyi) [Oct 2009]
 
-[Could graph neural networks learn better molecular representation for drug discovery? A comparison study of descriptor-based and graph-based models](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00479-8)
+[Gaussian Approximation Potential: an interatomic potential derived from first principles Quantum Mechanics](https://arxiv.org/abs/1003.2817) (Bartok) [Mar 2010]
 
-[On representing chemical environments](https://arxiv.org/abs/1209.3140)
+[Accuracy and transferability of GAP models for tungsten](https://arxiv.org/abs/1405.4370) (Szlachta, Bartok, Csanyi) [May 2014]
 
-[Optimizing many-body atomic descriptors for enhanced computational performance of machine learning based interatomic potentials](https://arxiv.org/abs/1905.02142)
+[Localized Coulomb Descriptors for the Gaussian Approximation Potential](https://arxiv.org/abs/1611.05126) (Barker, Bulin, Hamaekers, Mathias) [Nov 2016]
 
-[Representations of molecules and materials for interpolation of quantum-mechanical simulations via machine learning](https://www.nature.com/articles/s41524-022-00721-x)
+[Many-Body Coarse-Grained Interactions using Gaussian Approximation Potentials](https://arxiv.org/abs/1611.09123) (John) [Nov 2016]
 
-[Moment Tensor Potentials: a class of systematically improvable interatomic potentials](https://arxiv.org/abs/1512.06054)
+[Machine-learned Interatomic Potentials for Alloys and Alloy Phase Diagrams](https://arxiv.org/abs/1906.07816) (Rosenbrock, Gubaev, Shapeev, Pártay, Bernstein, Csányi, Hart) [Jun 2019]
+- Combines SOAP and GAP
 
-[Convolutional Networks on Graphs for Learning Molecular Fingerprints](https://arxiv.org/abs/1509.09292)
+[Combining phonon accuracy with high transferability in Gaussian approximation potential models](https://arxiv.org/abs/2005.07046) (George, Hautier, Bartok, Csanyi, Deringer) [May 2020]
 
-[Unified Representation of Molecules and Crystals for Machine Learning](https://arxiv.org/abs/1704.06439)
+[Gaussian Moments as Physically Inspired Molecular Descriptors for Accurate and Scalable Machine Learning Potentials](https://pubs.acs.org/doi/10.1021/acs.jctc.0c00347) (Zaverkin, Kastner) [July 2020]
 
-[Gaussian Moments as Physically Inspired Molecular Descriptors for Accurate and Scalable Machine Learning Potentials](https://pubs.acs.org/doi/10.1021/acs.jctc.0c00347)
+[Massively Parallel Fitting of Gaussian Approximation Potentials](https://arxiv.org/abs/2207.03803) (Klawohn, Kermode, Bartók) [Jul 2022]
 
-[How to represent crystal structures for machine learning: Towards fast prediction of electronic properties](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.205118)
+[Atomistic structure search using local surrogate mode](https://arxiv.org/abs/2208.09273) (Rønne, Christiansen, Slavensky, Tang, Brix, Pedersen, Bisbo, Hammer) [Aug 2022]
 
-[DScribe: Library of descriptors for machine learning in materials science](https://www.sciencedirect.com/science/article/pii/S0010465519303042)
+### Moment Tensor Potentials
 
-[A novel approach to describe chemical environments in high-dimensional neural network potentials](https://aip.scitation.org/doi/10.1063/1.5086167)
+[Moment Tensor Potentials: a class of systematically improvable interatomic potentials](https://arxiv.org/abs/1512.06054) (Shapeev) [Dec 2015]
 
-[Alchemical and structural distribution based representation for universal quantum machine learning](https://aip.scitation.org/doi/10.1063/1.5020710)
+[Moment tensor Potentials as a Promising Tool to Study Diffusion Processes](https://arxiv.org/abs/1812.02946) (Novoselov, Yanilkin, Shapeev, Podryabinkin) [Dec 2018]
 
-[Augmenting machine learning of energy landscapes with local structural information](https://aip.scitation.org/doi/10.1063/5.0012407)
+[Machine-learning potentials enable predictive $\textit{and}$ tractable high-throughput screening of random alloys](https://arxiv.org/abs/2107.05620) (Hodapp, Shapeev) [Jul 2021]
 
-[An Atomistic Fingerprint Algorithm for Learning Ab Initio Molecular Force Fields](https://arxiv.org/abs/1709.09235)
+### Atom-Centered Symmetry Functions
 
-[An assessment of the structural resolution of various fingerprints commonly used in machine learning](https://arxiv.org/abs/2008.03189)
+[Generalized Neural-Network Representation of High-Dimensional Potential-Energy Surfaces](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401) (Behler, Parrinello) [Apr 2007]
+  - One of the first works to introduce neural network interatomic potentials
 
-[A fingerprint based metric for measuring similarities of crystalline structures](https://aip.scitation.org/doi/10.1063/1.4940026)
+[Atom-centered symmetry functions for constructing high-dimensional neural network potentials](https://aip.scitation.org/doi/abs/10.1063/1.3553717) (Behler) [Feb 2011]
 
-[FCHL revisited: Faster and more accurate quantum machine learning](https://aip.scitation.org/doi/10.1063/1.5126701)
+[wACSF—Weighted atom-centered symmetry functions as descriptors in machine learning potentials](https://aip.scitation.org/doi/10.1063/1.5019667) (Gastegger, Schwiedrzik, Bittermann, Berzsenyi, Marquetand) [Mar 2018]
 
-[Solid harmonic wavelet scattering](https://dl.acm.org/doi/10.5555/3295222.3295400)
+[Optimized symmetry functions for machine-learning interatomic potentials of multicomponent systems](https://aip.scitation.org/doi/10.1063/1.5040005) (Rostami, Amsler, Ghasemi) [Sep 2018]
 
-[Steerable Wavelet Scattering for 3D Atomic Systems with Application to Li-Si Energy Prediction](https://arxiv.org/abs/1812.02320)
+[Augmenting machine learning of energy landscapes with local structural information](https://aip.scitation.org/doi/10.1063/5.0012407) (Honrao, Xie, Hennig) [Aug 2020]
 
-[Wavelet Scattering Networks for Atomistic Systems with Extrapolation of Material Properties](https://arxiv.org/abs/2006.01247)
+[Unified theory of atom-centered representations and message-passing machine-learning schemes](https://aip.scitation.org/doi/pdf/10.1063/5.0087042) (Nigam, Pozdnyakov, Fraux) [May 2022]
 
-[Machine-Learning Informed Representations for Grain Boundary Structures](https://www.frontiersin.org/articles/10.3389/fmats.2019.00168/full)
+### FCHL
+(Acronym based off of initial authors' last names)
 
-[wACSF—Weighted atom-centered symmetry functions as descriptors in machine learning potentials](https://aip.scitation.org/doi/10.1063/1.5019667)
+[Alchemical and structural distribution based representation for universal quantum machine learning](https://aip.scitation.org/doi/10.1063/1.5020710) (Faber, Christensen, Huang, von Lilienfeld) [Mar 2018]
 
-[Embedded Atom Neural Network Potentials: Efficient and Accurate Machine Learning with a Physically Inspired Representation](https://pubs.acs.org/doi/abs/10.1021/acs.jpclett.9b02037)
+[FCHL revisited: Faster and more accurate quantum machine learning](https://aip.scitation.org/doi/10.1063/1.5126701) (Christensen, Bratholm, Faber, von Lilienfeld) [Jan 2020]
 
+### Wavelet Scattering
+
+[Solid harmonic wavelet scattering](https://dl.acm.org/doi/10.5555/3295222.3295400) (Eickenberg, Exarchakis, Hirn, Mallat) [Dec 2017]
+
+[Steerable Wavelet Scattering for 3D Atomic Systems with Application to Li-Si Energy Prediction](https://arxiv.org/abs/1812.02320) (Brumwell, Sinz, Jin Kim, Qi, Hirn) [Nov 2018]
+
+[Wavelet Scattering Networks for Atomistic Systems with Extrapolation of Material Properties](https://arxiv.org/abs/2006.01247) (Sinz, Swift, Brumwell, Liu, Jin Kim, Qi, Hirn) [Jun 2020]
+
+### Miscellaneous
+
+[Fourier series of atomic radial distribution functions: A molecular fingerprint for machine learning models of quantum chemical properties](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.24912) (von Lilienfeld, Ramakrishnan, Rupp, Knoll) [Jul 2013]
+
+[How to represent crystal structures for machine learning: Towards fast prediction of electronic properties](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.205118) (Schutt, Glawe, Brockherde, Sanna, Muller, Gross) [May 2014]
+- Representation specifically for materials
+
+[A fingerprint based metric for measuring similarities of crystalline structures](https://aip.scitation.org/doi/10.1063/1.4940026) (Zhu, Amsler, Fuhrer, Schaefer, Faraji, Rostami, Ghasemi, Sadeghi, Grauzinyte, Wolverton, Goedecker) [Jan 2016]
+- Representation specifically for materials
+
+[Unified Representation of Molecules and Crystals for Machine Learning](https://arxiv.org/abs/1704.06439) (Huo, Rupp) [Apr 2017]
+- Many-body Tensor Representation (referred to as MBTR in other literature)
+
+[An Atomistic Fingerprint Algorithm for Learning Ab Initio Molecular Force Fields](https://arxiv.org/abs/1709.09235) (Tang, Zhang, Karniadakis) [Dec 2017]
+
+[A novel approach to describe chemical environments in high-dimensional neural network potentials](https://aip.scitation.org/doi/10.1063/1.5086167) (Kocer, Mason, Erturk) [Mar 2019]
+
+[Embedded Atom Neural Network Potentials: Efficient and Accurate Machine Learning with a Physically Inspired Representation](https://pubs.acs.org/doi/abs/10.1021/acs.jpclett.9b02037) (Zhang, Hu, Jiang) [Aug 2019]
+- Empirical Atom Method (referred to as EAM in other literature)
+
+[Continuous and optimally complete description of chemical environments using Spherical Bessel descriptors](https://aip.scitation.org/doi/10.1063/1.5111045) (Kocer, Mason, Erturk) [Jan 2020]
+- Spherical Bessel (referred to as SB in other literature)
+
+[TUCAN: A molecular identifier and descriptor applicable to the whole periodic table from hydrogen to oganesson](https://europepmc.org/article/ppr/ppr479842) (Brammer, Blanke, Kellner, Hoffmann, Herres-Pawlis, Schatzschneider) [Mar 2022]
+
+### Meta-literature
+
+[SISSO: A compressed-sensing method for identifying the best low-dimensional descriptor in an immensity of offered candidates](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.2.083802) (Ouyang, Curtarolo, Ahmetcik, Scheffler, Ghiringhelli) [Aug 2018]
+
+[A Performance and Cost Assessment of Machine Learning Interatomic Potentials](https://arxiv.org/abs/1906.08888) (Zuo, Chen, Li, Deng, Chen, Behler, Csányi, Shapeev, Thompson, Wood, Ong) [Jul 2019]
+
+[DScribe: Library of descriptors for machine learning in materials science](https://www.sciencedirect.com/science/article/pii/S0010465519303042) (Himanen, Jäger, Morooka, Canova, Ranawat, Gao, Rinke, Foster) [Nov 2019]
+
+[Descriptors representing two- and three-body atomic distributions and their effects on the accuracy of machine-learned inter-atomic potentials](https://aip.scitation.org/doi/10.1063/5.0009491) (Jinnouchi, Karsai, Verdi, Asahi, Kresse) [Apr 2020]
+
+[Sensitivity and Dimensionality of Atomic Environment Representations used for Machine Learning Interatomic Potentials](https://arxiv.org/abs/2006.01915) (Onat, Ortner, Kermode) [Jun 2020]
+
+[An assessment of the structural resolution of various fingerprints commonly used in machine learning](https://arxiv.org/abs/2008.03189) (Karamad, Magar, Shi, Siahrostami, Gates, Farimani) [Aug 2020]
+
+[Incompleteness of Atomic Structure Representations](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.166001) (Pozdnyakov, Willatt, Bartok, Ortner, Csanyi, Ceriotti) [Oct 2020]
+
+[Compressing local atomic neighbourhood descriptors](https://arxiv.org/abs/2112.13055) (Darby, Kermode, Csányi) [Dec 2021]
+
+[Manifolds of quasi-constant SOAP and ACSF fingerprints and the resulting failure to machine learn four-body interactions](https://arxiv.org/abs/2102.06915) (Parsaeifard, Goedecker) [Feb 2021]
+
+[The role of feature space in atomistic learning](https://iopscience.iop.org/article/10.1088/2632-2153/abdaf7) (Goscinski, Fraux, Imbalzano, Ceriotti) [Apr 2021]
 
 ## Atomistic Simulation
 
