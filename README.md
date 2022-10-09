@@ -137,9 +137,11 @@ Below are various techniques for representing atomic systems and materials in a 
 | [Sensitivity and Dimensionality of Atomic Environment Representations used for Machine Learning Interatomic Potentials](https://arxiv.org/abs/2006.01915) | Onat, Ortner, Kermode | Jun 2020 |
 | [An assessment of the structural resolution of various fingerprints commonly used in machine learning](https://arxiv.org/abs/2008.03189) | Karamad, Magar, Shi, Siahrostami, Gates, Farimani | Aug 2020 |
 | [Incompleteness of Atomic Structure Representations](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.166001) | Pozdnyakov, Willatt, Bartok, Ortner, Csanyi, Ceriotti | Oct 2020 |
-| [Compressing local atomic neighbourhood descriptors](https://arxiv.org/abs/2112.13055) | Darby, Kermode, Csányi | Dec 2021 |
 | [Manifolds of quasi-constant SOAP and ACSF fingerprints and the resulting failure to machine learn four-body interactions](https://arxiv.org/abs/2102.06915) | Parsaeifard, Goedecker | Feb 2021 |
 | [The role of feature space in atomistic learning](https://iopscience.iop.org/article/10.1088/2632-2153/abdaf7) | Goscinski, Fraux, Imbalzano, Ceriotti | Apr 2021 |
+| [Strategies for the Construction of Machine-Learning Potentials for Accurate and
+Efficient Atomic-Scale Simulations](https://arxiv.org/pdf/2101.10468.pdf) | Miksch, Morawietz, Kästner, Urban, Artrith | May 2021 |
+| [Compressing local atomic neighbourhood descriptors](https://arxiv.org/abs/2112.13055) | Darby, Kermode, Csányi | Dec 2021 |
 
 ## Tools and Architectures
 These are methods and networks that are intended to process materials or molecular data for the purposes of atomistic simulation (occasionally, property prediction)
