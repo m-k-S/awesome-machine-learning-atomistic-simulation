@@ -139,8 +139,7 @@ Below are various techniques for representing atomic systems and materials in a 
 | [Incompleteness of Atomic Structure Representations](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.166001) | Pozdnyakov, Willatt, Bartok, Ortner, Csanyi, Ceriotti | Oct 2020 |
 | [Manifolds of quasi-constant SOAP and ACSF fingerprints and the resulting failure to machine learn four-body interactions](https://arxiv.org/abs/2102.06915) | Parsaeifard, Goedecker | Feb 2021 |
 | [The role of feature space in atomistic learning](https://iopscience.iop.org/article/10.1088/2632-2153/abdaf7) | Goscinski, Fraux, Imbalzano, Ceriotti | Apr 2021 |
-| [Strategies for the Construction of Machine-Learning Potentials for Accurate and
-Efficient Atomic-Scale Simulations](https://arxiv.org/pdf/2101.10468.pdf) | Miksch, Morawietz, Kästner, Urban, Artrith | May 2021 |
+| [Strategies for the Construction of Machine-Learning Potentials for Accurate and Efficient Atomic-Scale Simulations](https://arxiv.org/pdf/2101.10468.pdf) | Miksch, Morawietz, Kästner, Urban, Artrith | May 2021 |
 | [Compressing local atomic neighbourhood descriptors](https://arxiv.org/abs/2112.13055) | Darby, Kermode, Csányi | Dec 2021 |
 
 ## Tools and Architectures
@@ -156,7 +155,7 @@ These are methods and networks that are intended to process materials or molecul
 | [Spherical CNNs](https://arxiv.org/abs/1801.10130) | Cohen, Geiger, Koehler, Welling | Jan 2018 |
 | [Tensor field networks: Rotation- and translation-equivariant neural networks for 3D point clouds](https://arxiv.org/abs/1802.08219) | Smidt, Thomas, Kearnes, Yang, Li, Kohlhoff, Riley | Feb 2018 |
 | [N-body Networks: a Covariant Hierarchical Neural Network Architecture for Learning Atomic Potentials](https://arxiv.org/abs/1803.01588) | Kondor | Mar 2018 |
-| [Clebsch-Gordan Nets: a Fully Fourier Space Spherical Convolutional Neural Network](https://arxiv.org/abs/1806.09231) | ondor, Lin, Trivedi | Jun 2018 |
+| [Clebsch-Gordan Nets: a Fully Fourier Space Spherical Convolutional Neural Network](https://arxiv.org/abs/1806.09231) | Kondor, Lin, Trivedi | Jun 2018 |
 | [3D Steerable CNNs: Learning Rotationally Equivariant Features in Volumetric Data](https://arxiv.org/abs/1807.02547) | Weiler, Geiger, Welling, Boomsma, Cohen | Jul 2018 |
 | [SE(3)-Equivariant prediction of molecular wavefunctions and electronic densities](https://arxiv.org/abs/2106.02347) | Unke, Bogojeski, Gastegger, Geiger, Smidt, Müller | Jun 2021 |
 
@@ -257,4 +256,5 @@ These are methods and networks that are intended to process materials or molecul
 | ------------ | --------- | --------- |
 | [Challenges for machine learning force fields in reproducing potential energy surfaces of flexible molecules](https://aip.scitation.org/doi/10.1063/5.0038516) | Vassilev-Galindo, Fonseca, Poltavsky, Tkatchenko | Mar 2021 |
 | [Symmetry Group Equivariant Architectures for Physics](https://arxiv.org/abs/2203.06153) | Bogatskiy, Ganguly, Kipf, Kondor, Miller, Murnane, Offermann, Pettee, Shanahan, Shimmin, Thais | Mar 2022 |
+| [How Robust are Modern Graph Neural Network Potentials in Long and Hot Molecular Dynamics Simulations?](https://chemrxiv.org/engage/chemrxiv/article-details/6246035d3affe4aa143c3848) | Stocker, Gasteiger, Becker, Gunnemann, Margraf | Apr 2022 |
 | [Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://openreview.net/pdf?id=_V-nKeWvs7p) | Anonymous Authors | Sep 2022 |
