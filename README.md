@@ -38,7 +38,8 @@ Below are various techniques for representing atomic systems and materials in a 
 | ------------ | --------- | --------- |
 | [Atomic cluster expansion for accurate and transferable interatomic potentials](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.014104) | Drautz | Jan 2019 |
 | [Atomic cluster expansion of scalar, vectorial and tensorial properties and including magnetism and charge transfer](https://arxiv.org/abs/2003.00221) | Drautz | Feb 2020 |
-| [[2103.00814] Performant implementation of the atomic cluster expansion: Application to copper and silicon](https://arxiv.org/abs/2103.00814) | Lysogorskiy, van der Oord, Bochkarev, Menon, Rinaldi, Hammerschmidt, Mrovec, Thompson, Csányi, Ortner, Drautz | Mar 2021 |
+| [Performant implementation of the atomic cluster expansion: Application to copper and silicon](https://arxiv.org/abs/2103.00814) | Lysogorskiy, van der Oord, Bochkarev, Menon, Rinaldi, Hammerschmidt, Mrovec, Thompson, Csányi, Ortner, Drautz | Mar 2021 |
+| [Efficient parametrization of the atomic cluster expansion](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.013804) | Bochkarev, Lysogorskiy, Menon, Qamar, Mrovec, Drautz | Jan 2022 |
 | [Atomic cluster expansion: Completeness, efficiency and stability](https://www.sciencedirect.com/science/article/pii/S0021999122000080?via%3Dihub) | Dusson, Bachmayr, Csanyi, Drautz, Etter, van der Oord, Ortner | Apr 2022 |
 | [Multilayer atomic cluster expansion for semi-local interactions](https://arxiv.org/pdf/2205.08177.pdf) | Bochkarev, Lysogorskiy, Ortner, Csanyi, Drautz | May 2022 |
 | [Atomic cluster expansion and wave function representations](https://arxiv.org/abs/2206.11375) | Drautz, Ortner | Jun 2022 |
@@ -257,4 +258,4 @@ These are methods and networks that are intended to process materials or molecul
 | [Challenges for machine learning force fields in reproducing potential energy surfaces of flexible molecules](https://aip.scitation.org/doi/10.1063/5.0038516) | Vassilev-Galindo, Fonseca, Poltavsky, Tkatchenko | Mar 2021 |
 | [Symmetry Group Equivariant Architectures for Physics](https://arxiv.org/abs/2203.06153) | Bogatskiy, Ganguly, Kipf, Kondor, Miller, Murnane, Offermann, Pettee, Shanahan, Shimmin, Thais | Mar 2022 |
 | [How Robust are Modern Graph Neural Network Potentials in Long and Hot Molecular Dynamics Simulations?](https://chemrxiv.org/engage/chemrxiv/article-details/6246035d3affe4aa143c3848) | Stocker, Gasteiger, Becker, Gunnemann, Margraf | Apr 2022 |
-| [Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://openreview.net/pdf?id=_V-nKeWvs7p) | Anonymous Authors | Sep 2022 |
+| [Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://arxiv.org/abs/2210.07237) | X. Fu, Z. Wu, W. Wang, T. Xie, Keten, Gomez-Bombarelli, Jaakkola | Sep 2022 |
