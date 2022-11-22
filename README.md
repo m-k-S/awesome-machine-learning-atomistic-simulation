@@ -167,6 +167,7 @@ These are methods and networks that are intended to process materials or molecul
 | [Relevance of Rotationally Equivariant Convolutions for Predicting Molecular Properties](https://arxiv.org/abs/2008.08461) | Miller, Geiger, Smidt, Noe | Aug 2020 |
 | [E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials](https://arxiv.org/abs/2101.03164) (NequIP) | Batzner, Musaelian, Sun, Geiger, Mailoa, Kornbluth, Molinari, Smidt, Kozinsky | Jan 2021]
 | [Direct Prediction of Phonon Density of States With Euclidean Neural Networks](https://onlinelibrary.wiley.com/doi/full/10.1002/advs.202004214) | Chen, Andrejevic, Smidt, Z. Ding, Q. Xu, Y. Chi, Q. Nguyen, Alatas, Kong, M. Li | Mar 2021 |
+| [Cracking the Quantum Scaling Limit with Machine Learned Electron Densities](https://arxiv.org/abs/2201.03726) | Rackers, Tecot, Geiger, Smidt | Jan 2022 |
 | [Learning Local Equivariant Representations for Large-Scale Atomistic Dynamics](https://arxiv.org/pdf/2204.05249.pdf) (Allegro) | Musaelian, Batzner, Johansson, Sun, Owen, Kornbluth, Kozinsky | Apr 2022 |
 | [The Design Space of E(3)-Equivariant Atom-Centered Interatomic Potentials](https://arxiv.org/abs/2205.06643) (BOTNet) | Batatia, Batzner, Kovács, Musaelian, Simm, Drautz, Ortner, Kozinsky, Csányi | May 2022 |
 | [MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields](https://arxiv.org/abs/2206.07697) | Batatia, Kovács, Simm, Ortner, Csányi | Jun 2022 |
@@ -210,6 +211,7 @@ These are methods and networks that are intended to process materials or molecul
 | [Accurate Molecular Dynamics Enabled by Efficient Physically-Constrained Machine Learning Approaches](https://arxiv.org/abs/1912.06401) | Chmiela, Sauceda, Tkatchenko, Muller | Dec 2019 |
 | [Ensemble learning of coarse-grained molecular dynamics force fields with a kernel approach](https://aip.scitation.org/doi/10.1063/5.0007276) | J. Wang, Chmiela, Muller, Noe, Clementi | May 2020 |
 | [Molecular force fields with gradient-domain machine learning (GDML): Comparison and synergies with classical force fields](https://aip.scitation.org/doi/10.1063/5.0023005) | Sauceda, Gastegger, Chmiela, Muller, Tkatchenko | Sep 2020 |
+| [Towards Linearly Scaling and Chemically Accurate Global Machine Learning Force Fields for Large Molecules](https://arxiv.org/abs/2209.03985) | Kabylda, Vassilev-Galindo, Chmiela, Poltavsky, Tkatchenko | Sep 2022 |
 
 ### DeepPot
 | Title & Link | Author(s) | Pub. Date |
@@ -259,3 +261,4 @@ These are methods and networks that are intended to process materials or molecul
 | [Symmetry Group Equivariant Architectures for Physics](https://arxiv.org/abs/2203.06153) | Bogatskiy, Ganguly, Kipf, Kondor, Miller, Murnane, Offermann, Pettee, Shanahan, Shimmin, Thais | Mar 2022 |
 | [How Robust are Modern Graph Neural Network Potentials in Long and Hot Molecular Dynamics Simulations?](https://chemrxiv.org/engage/chemrxiv/article-details/6246035d3affe4aa143c3848) | Stocker, Gasteiger, Becker, Gunnemann, Margraf | Apr 2022 |
 | [Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://arxiv.org/abs/2210.07237) | X. Fu, Z. Wu, W. Wang, T. Xie, Keten, Gomez-Bombarelli, Jaakkola | Sep 2022 |
+| [Neural Scaling of Deep Chemical Models](https://chemrxiv.org/engage/chemrxiv/article-details/627bddd544bdd532395fb4b5) | Frey, Soklaski, Alexrod, Samsi, Gomez-Bombarelli, Coley, Gadepally | May 2022 |
