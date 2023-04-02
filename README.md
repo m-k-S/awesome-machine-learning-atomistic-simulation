@@ -262,3 +262,4 @@ These are methods and networks that are intended to process materials or molecul
 | [How Robust are Modern Graph Neural Network Potentials in Long and Hot Molecular Dynamics Simulations?](https://chemrxiv.org/engage/chemrxiv/article-details/6246035d3affe4aa143c3848) | Stocker, Gasteiger, Becker, Gunnemann, Margraf | Apr 2022 |
 | [Forces Are Not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations](https://arxiv.org/abs/2210.07237) | X. Fu, Z. Wu, W. Wang, T. Xie, Keten, Gomez-Bombarelli, Jaakkola | Sep 2022 |
 | [Neural Scaling of Deep Chemical Models](https://chemrxiv.org/engage/chemrxiv/article-details/627bddd544bdd532395fb4b5) | Frey, Soklaski, Alexrod, Samsi, Gomez-Bombarelli, Coley, Gadepally | May 2022 |
+| [Incompleteness of graph neural networks for points clouds in three dimensions](https://iopscience.iop.org/article/10.1088/2632-2153/aca1f8) | Pozdnyakov, Ceriotti | Nov 2022 |
