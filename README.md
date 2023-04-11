@@ -174,6 +174,7 @@ These are methods and networks that are intended to process materials or molecul
 | [Equiformer: Equivariant Graph Attention Transformer for 3D Atomistic Graphs](https://arxiv.org/abs/2206.11990) | Liao, Smidt | Jun 2022 |
 | [e3nn: Euclidean Neural Networks](https://arxiv.org/abs/2207.09453) | Geiger, Smidt | Jul 2022 |
 | [Machine Learning Magnetism Classifiers from Atomic Coordinates](https://www.sciencedirect.com/science/article/pii/S258900422201464X) | Merker, Heiberger, Q. Nguyen, Liu, Chen, Andrejevic, Drucker, Okabe, S.E. Kim, Wang, Smidt, M. Li | Sep 2022 |
+| [High Accuracy Uncertainty-Aware Interatomic Force Modeling with Equivariant Bayesian Neural Networks](https://arxiv.org/abs/2304.03694) | Rensmeyer, Craig, Kramer, Niggemann | Apr 2023 |
 
 ### Equivariant Graph Neural Networks (EGNN)
 | Title & Link | Author(s) | Pub. Date |
